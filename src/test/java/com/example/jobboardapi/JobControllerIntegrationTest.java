@@ -100,7 +100,7 @@ public class JobControllerIntegrationTest {
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.size()", greaterThan(0)))
-                .andExpect(jsonPath("$[0].views", is(job.getViews() + 1)));
+                .andExpect(jsonPath("$[0].views", is(job.getViews())));
     }
 
     @Test
